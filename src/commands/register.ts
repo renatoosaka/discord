@@ -2,8 +2,8 @@ import 'module-alias/register';
 import 'dotenv/config';
 
 import { commands } from '.'
-import { discord } from '@/services';
-import { DISCORD_APP_ID } from '@/config';
+import { discord } from '../services';
+import { DISCORD_APP_ID } from '../config';
 
 (async () => {
   try {

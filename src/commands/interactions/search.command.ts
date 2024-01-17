@@ -1,6 +1,6 @@
 import { getBorderCharacters, table } from 'table';
 import { Command } from "../types";
-import { searchItem } from "@/services/database";
+import { searchItem } from "../../services/database";
 
 export const searchCommand: Command = {
   name: 'search',

@@ -13,7 +13,7 @@ import {
 	VoiceConnectionStatus,
 } from '@discordjs/voice';
 import { Command } from "../types";
-import { getItem, searchItem } from "@/services/database";
+import { getItem, searchItem } from "../../services/database";
 
 const player = createAudioPlayer();
 

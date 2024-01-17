@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { DISCORD_TOKEN } from '@/config';
+import { DISCORD_TOKEN } from '../config';
 
 export const discord = axios.create({
     baseURL: 'https://discord.com/api/v10',
