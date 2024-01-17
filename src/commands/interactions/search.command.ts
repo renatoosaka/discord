@@ -1,4 +1,4 @@
-import { table } from 'table';
+import { getBorderCharacters, table } from 'table';
 import { Command } from "../types";
 import { searchItem } from "@/services/database";
 
@@ -44,7 +44,7 @@ export const searchCommand: Command = {
       return acc;
     }, [['ID', 'Title']] as string[][]);
 
-    const response = table(data);
+    const response = table(data, { border: getBorderCharacters('norc') });
     await interaction.followUp({ content: '**Here are the results:** \n\n```' + response + '```', ephemeral: true });
   }
 }

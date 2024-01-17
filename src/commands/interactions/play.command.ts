@@ -1,4 +1,4 @@
-import { table } from 'table';
+import { getBorderCharacters, table } from 'table';
 import {
   ApplicationCommandOptionType,
   ApplicationCommandType,
@@ -72,7 +72,7 @@ export const playCommand: Command = {
           return acc;
         }, [['ID', 'Title']] as string[][]);
 
-        const response = table(data);
+        const response = table(data, { border: getBorderCharacters('norc') });
         await interaction.followUp({ content: '**I could not find that audio, but i found these:** \n\n```' + response + '```', ephemeral: true });
         return;
       }
